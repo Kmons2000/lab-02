@@ -22,6 +22,11 @@ class List {
    * @returns {*}
    */
   pop() {
+    if (this.length === 0)
+    {
+      return null;
+    }
+
     let returnValue = this.data[this.length-1];
   delete this.data[this.length-1];
   this.length--;
@@ -48,7 +53,7 @@ class List {
 
   forEach(callback) {
     for(let i = 0; i < this.length; i++) {
-      callback(this[i]);
+      callback(this.data[i]);
     }
   }
 

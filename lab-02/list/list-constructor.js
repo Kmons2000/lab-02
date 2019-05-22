@@ -36,7 +36,7 @@ List.prototype.unshift = function() {
   for(let i = 0; i < arguments.length; i++) {
     this.length++;
     for(let i = this.length -1; i >= 0; i--) {
-      this.data[i + 1] = this.data[i]
+      this.data[i + 1] = this.data[i];
     }
     this.data[0] = items[i];
   }
@@ -46,6 +46,6 @@ List.prototype.forEach = function(callback) {
   for(let i = 0; i < this.length; i++) {
     callback(this[i]);
   }
-}
+};
 
 module.exports = List;

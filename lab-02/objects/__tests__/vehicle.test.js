@@ -4,6 +4,24 @@ const VehicleConstructor = require('../vehicle-constructor.js');
 const VehicleClass = require('../vehicle-class.js');
 const VehicleFactory = require('../vehicle-factory.js');
 
+describe('equal vs stricEqual', () => {
+  var v1 = new VehicleConstructor.Car('hi', 4);
+  var v2 = new VehicleClass.Car('hi', 4);
+  var v3 = new VehicleClass.Car('hi', 4);
+
+  it('thinks vehicles are equal', () => {
+    expect(v1).toEqual(v2);
+  });
+
+  it('thinks vehicles from different constructors are not strictly equal', () => {
+    expect(v1).not.toStrictEqual(v2);
+  });
+
+  it('thinks vehicles from same constructors are strictly equal', () => {
+    expect(v3).toStrictEqual(v2);
+  });
+});
+
 let types = ['Constructor', 'class', 'factory'];
 
 describe('Vehicles', () => {

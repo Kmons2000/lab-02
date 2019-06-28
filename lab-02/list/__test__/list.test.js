@@ -75,6 +75,7 @@ describe('List Data Structure', () => {
     let stuff = new List();
     stuff.push('a');
     stuff.push('b');
+
     stuff.unshift('c', 'd');
     expect(stuff.length).toEqual(4);
     expect(stuff.data[0]).toEqual('d');
@@ -122,6 +123,7 @@ describe('List Data Structure', () => {
       expect(eachValue.length).toBe(5);
       expect(eachValue).toStrictEqual(['a','b','c','d','e']);
     });
+
   });
 
 });

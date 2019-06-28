@@ -2,7 +2,7 @@
 
 const VehicleConstructor = require('../vehicle-constructor.js');
 const VehicleClass = require('../vehicle-class.js');
-const VehicleFactory = require('../vehicle-factory.js')
+const VehicleFactory = require('../vehicle-factory.js');
 
 describe('equal vs stricEqual', () => {
   var v1 = new VehicleConstructor.Car('hi', 4);
@@ -30,14 +30,14 @@ describe('Vehicles', () => {
     
     function getCar(type) {
       switch(type) {
-        case 'Constructor':
-          return new VehicleConstructor.Car('foo', 4);
-        case 'class':
-          return new VehicleClass.Car('foo', 4);
-        case 'factory':
-          return VehicleFactory.CarFactory('foo', 4);
-        default:
-          return {};
+      case 'Constructor':
+        return new VehicleConstructor.Car('foo', 4);
+      case 'class':
+        return new VehicleClass.Car('foo', 4);
+      case 'factory':
+        return VehicleFactory.CarFactory('foo', 4);
+      default:
+        return {};
       }
     }
     
@@ -68,14 +68,14 @@ describe('Vehicles', () => {
 
     function getMotorcycle(type) {
       switch(type) {
-        case 'Constructor':
-          return new VehicleConstructor.Motorcycle('foo',2);
-        case 'class':
-          return new VehicleClass.Motorcycle('foo',2);
-        case 'factory':
-          return VehicleFactory.MotorcycleFactory('foo', 2);
-        default:
-          return {};
+      case 'Constructor':
+        return new VehicleConstructor.Motorcycle('foo',2);
+      case 'class':
+        return new VehicleClass.Motorcycle('foo',2);
+      case 'factory':
+        return VehicleFactory.MotorcycleFactory('foo', 2);
+      default:
+        return {};
       }
     }
 
